@@ -20,7 +20,7 @@ Paddle SetPaddle(Pinx _in, Pinx _out, bool _initState)
 
 GPIO_PinState DebounceRead(Pinx pinx, int sampling_count, int threshold)
 {
-    int currentState;
+    int currentState = 0;
     for (int i = 0; i < sampling_count; ++i)
     {
         if (HAL_GPIO_ReadPin(pinx.port, pinx.pin) == GPIO_PIN_SET)

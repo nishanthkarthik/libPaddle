@@ -25,8 +25,8 @@ int main(void)
 
     //Initialization done separately
     //TODO: Add Clock and GPIO_Init to structure definitions
-    Pinx Out_Pin_1 = SetPinx(GPIOD, GPIO_PIN_12);
-    Pinx Out_Pin_2 = SetPinx(GPIOD, GPIO_PIN_13);
+    Pinx Out_Pin_1 = SetPinx(GPIOD, GPIO_PIN_11);
+    Pinx Out_Pin_2 = SetPinx(GPIOD, GPIO_PIN_12);
     Pinx In_Pin_1 = SetPinx(GPIOC, GPIO_PIN_2);
     Pinx In_Pin_2 = SetPinx(GPIOC, GPIO_PIN_3);
 
@@ -37,12 +37,13 @@ int main(void)
     {
         if ((DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_SET) && (paddle_1.state == false))	
         {	
+            int xyz = DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD);
             WritePinx(paddle_1.out,true);
             paddle_1.state = true;
             HAL_Delay(SHIFT_TIME_MS);
             WritePinx(paddle_1.out,false);
         }
-        else if (DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_SET)
+        else if (DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_RESET)
         {
             paddle_1.state = false;
         }
@@ -54,7 +55,7 @@ int main(void)
             HAL_Delay(SHIFT_TIME_MS);
             WritePinx(paddle_2.out,false);
         }
-        else if (DebounceRead(paddle_2.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_SET)
+        else if (DebounceRead(paddle_2.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_RESET)
         {
             paddle_2.state = false;
         }
@@ -66,7 +67,7 @@ void InitLed(void)
 {
     __GPIOD_CLK_ENABLE();
     GPIO_InitTypeDef g;
-    g.Pin = GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;
+    g.Pin = GPIO_PIN_11|GPIO_PIN_12;
     g.Speed = GPIO_SPEED_HIGH;
     g.Pull = GPIO_NOPULL;
     g.Mode = GPIO_MODE_OUTPUT_PP;

@@ -80,7 +80,7 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x556B223D)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x556B223D)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x556B223E)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x556B223E)
-F (..\Src\main.c)(0x55929BED)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy -I..\Drivers\CMSIS\Include -I..\Drivers\CMSIS\Device\ST\STM32F4xx\Include --C99-I F:\ARM\SourceControl\stm32-test\Control\MDK-ARM\RTE-I F:\ARM\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I F:\ARM\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F407xx -DUSE_HAL_DRIVER-o "control configuration\main.o" --omf_browse "control configuration\main.crf" --depend "control configuration\main.d")
+F (..\Src\main.c)(0x55938ABD)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy -I..\Drivers\CMSIS\Include -I..\Drivers\CMSIS\Device\ST\STM32F4xx\Include --C99-I F:\ARM\SourceControl\stm32-test\Control\MDK-ARM\RTE-I F:\ARM\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I F:\ARM\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F407xx -DUSE_HAL_DRIVER-o "control configuration\main.o" --omf_browse "control configuration\main.crf" --depend "control configuration\main.d")
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x556B223D)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x55913695)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x556B223E)
@@ -107,8 +107,8 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x556B223D
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x556B223E)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x556B223E)
 I (..\Inc\gpio.h)(0x55913694)
-I (..\Src\paddle.c)(0x5592976D)
-F (..\Src\paddle.c)(0x5592976D)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy -I..\Drivers\CMSIS\Include -I..\Drivers\CMSIS\Device\ST\STM32F4xx\Include --C99-I F:\ARM\SourceControl\stm32-test\Control\MDK-ARM\RTE-I F:\ARM\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I F:\ARM\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F407xx -DUSE_HAL_DRIVER-o "control configuration\paddle.o" --omf_browse "control configuration\paddle.crf" --depend "control configuration\paddle.d")
+I (..\Inc\paddle.h)(0x55937E9E)
+F (..\Src\paddle.c)(0x559387BE)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy -I..\Drivers\CMSIS\Include -I..\Drivers\CMSIS\Device\ST\STM32F4xx\Include --C99-I F:\ARM\SourceControl\stm32-test\Control\MDK-ARM\RTE-I F:\ARM\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I F:\ARM\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F407xx -DUSE_HAL_DRIVER-o "control configuration\paddle.o" --omf_browse "control configuration\paddle.crf" --depend "control configuration\paddle.d")
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x556B223D)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x55913695)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x556B223E)
@@ -134,6 +134,7 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x556B223D)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x556B223D)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x556B223E)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x556B223E)
+I (..\Inc\paddle.h)(0x55937E9E)
 F (..\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c)(0x556B2235)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc -I..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy -I..\Drivers\CMSIS\Include -I..\Drivers\CMSIS\Device\ST\STM32F4xx\Include --C99-I F:\ARM\SourceControl\stm32-test\Control\MDK-ARM\RTE-I F:\ARM\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I F:\ARM\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F407xx -DUSE_HAL_DRIVER-o "control configuration\system_stm32f4xx.o" --omf_browse "control configuration\system_stm32f4xx.crf" --depend "control configuration\system_stm32f4xx.d")
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x556B2235)
 I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x556B2235)
