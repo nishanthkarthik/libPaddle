@@ -2,7 +2,7 @@
 #include "gpio.h"
 #include "paddle.h"
 
-#define SHIFT_TIME_MS 1000
+#define SHIFT_TIME_MS 150
 //WARNING: Don't set sampling count more than 30000, integer overflow.
 #define DEBOUNCE_SAMPLING_N 500
 #define DEBOUNCE_THRESHOLD 400
