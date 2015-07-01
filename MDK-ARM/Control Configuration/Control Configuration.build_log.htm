@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: John Sull, WMPU, LIC=GMZ2Z-J5RGZ-3Y1VY-I5TLU-Z4PU6-YPSQ5
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.15.0
+Toolchain Path:  F:\ARM\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DCM.DLL V1.13.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.15.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.5.0
+ 
+<h2>Project:</h2>
+F:\ARM\SourceControl\stm32-test\Control\MDK-ARM\Control.uvprojx
+Project File Date:  06/30/2015
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'F:\ARM\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Control Configuration'
+compiling main.c...
+compiling paddle.c...
+linking...
+Control Configuration\Control Configuration.axf: Error: L6200E: Symbol DebounceRead multiply defined (by paddle.o and main.o).
+Control Configuration\Control Configuration.axf: Error: L6200E: Symbol SetPaddle multiply defined (by paddle.o and main.o).
+Control Configuration\Control Configuration.axf: Error: L6200E: Symbol SetPinx multiply defined (by paddle.o and main.o).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 3 error messages.
+"Control Configuration\Control Configuration.axf" - 3 Error(s), 0 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  F:\ARM\SourceControl\stm32-test\Control\MDK-ARM\RTE
+  F:\ARM\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>
