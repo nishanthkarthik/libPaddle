@@ -2,7 +2,7 @@
 #include "gpio.h"
 #include "paddle.h"
 
-#define SHIFT_TIME_MS 150
+#define SHIFT_TIME_MS 1000
 //WARNING: Don't set sampling count more than 30000, integer overflow.
 #define DEBOUNCE_SAMPLING_N 500
 #define DEBOUNCE_THRESHOLD 400
@@ -10,7 +10,7 @@
 void SystemClock_Config(void);
 void InitButton(void);
 void InitLed(void);
-GPIO_PinState ReadPinD(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+//GPIO_PinState ReadPinD(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
 
 int main(void)
 {
@@ -26,22 +26,26 @@ int main(void)
     //Initialization done separately
     //TODO: Add Clock and GPIO_Init to structure definitions
     Pinx Out_Pin_1 = SetPinx(GPIOD, GPIO_PIN_11);
-    Pinx Out_Pin_2 = SetPinx(GPIOD, GPIO_PIN_12);
-    Pinx In_Pin_1 = SetPinx(GPIOC, GPIO_PIN_2);
+    Pinx Out_Pin_2 = SetPinx(GPIOD, GPIO_PIN_13);
+    Pinx In_Pin_1 = SetPinx(GPIOC, GPIO_PIN_1);
     Pinx In_Pin_2 = SetPinx(GPIOC, GPIO_PIN_3);
 
     Paddle paddle_1 = SetPaddle(In_Pin_1, Out_Pin_1, false);
     Paddle paddle_2 = SetPaddle(In_Pin_2, Out_Pin_2, false);
 
+		//Keep in mind, Inverse Logic
+		WritePinx(paddle_1.out,true);
+		WritePinx(paddle_2.out,true);
+	
     while (1)
     {
         if ((DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_SET) && (paddle_1.state == false))	
         {	
-            int xyz = DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD);
-            WritePinx(paddle_1.out,true);
+            //int xyz = DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD);
+            WritePinx(paddle_1.out,false);
             paddle_1.state = true;
             HAL_Delay(SHIFT_TIME_MS);
-            WritePinx(paddle_1.out,false);
+            WritePinx(paddle_1.out,true);
         }
         else if (DebounceRead(paddle_1.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_RESET)
         {
@@ -50,10 +54,10 @@ int main(void)
             
         if ((DebounceRead(paddle_2.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_SET) && (paddle_2.state == false))	
         {	
-            WritePinx(paddle_2.out,true);
+            WritePinx(paddle_2.out,false);
             paddle_2.state = true;
             HAL_Delay(SHIFT_TIME_MS);
-            WritePinx(paddle_2.out,false);
+            WritePinx(paddle_2.out,true);
         }
         else if (DebounceRead(paddle_2.in,DEBOUNCE_SAMPLING_N,DEBOUNCE_THRESHOLD) == GPIO_PIN_RESET)
         {
@@ -67,7 +71,7 @@ void InitLed(void)
 {
     __GPIOD_CLK_ENABLE();
     GPIO_InitTypeDef g;
-    g.Pin = GPIO_PIN_11|GPIO_PIN_12;
+    g.Pin = GPIO_PIN_11|GPIO_PIN_13;
     g.Speed = GPIO_SPEED_HIGH;
     g.Pull = GPIO_NOPULL;
     g.Mode = GPIO_MODE_OUTPUT_PP;
@@ -79,7 +83,7 @@ void InitButton(void)
 {
     __GPIOC_CLK_ENABLE();
     GPIO_InitTypeDef g;
-    g.Pin = GPIO_PIN_2|GPIO_PIN_3;
+    g.Pin = GPIO_PIN_1|GPIO_PIN_3;
     g.Speed = GPIO_SPEED_HIGH;
     g.Pull = GPIO_NOPULL;
     g.Mode = GPIO_MODE_INPUT;

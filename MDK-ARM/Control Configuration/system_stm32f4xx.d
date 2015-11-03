@@ -2,7 +2,7 @@ control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\S
 control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
 control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Include\core_cm4.h
-control configuration\system_stm32f4xx.o: F:\ARM\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+control configuration\system_stm32f4xx.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Include\core_cmInstr.h
 control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Include\core_cmFunc.h
 control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Include\core_cmSimd.h
@@ -13,7 +13,7 @@ control configuration\system_stm32f4xx.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\st
 control configuration\system_stm32f4xx.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 control configuration\system_stm32f4xx.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 control configuration\system_stm32f4xx.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-control configuration\system_stm32f4xx.o: F:\ARM\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+control configuration\system_stm32f4xx.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 control configuration\system_stm32f4xx.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 control configuration\system_stm32f4xx.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 control configuration\system_stm32f4xx.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
